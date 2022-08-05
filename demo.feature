@@ -9,3 +9,8 @@ Feature: Evaluate percentage
     Given Execute DiscountService business
     When I will enter 12000
     Then We should get fifteen percent discount
+
+  Scenario: Verify No offer
+    Given Execute DiscountService business
+    When I will enter 3000
+    Then We should'nt get any percentage

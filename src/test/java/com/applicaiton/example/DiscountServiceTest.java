@@ -21,12 +21,6 @@ public class DiscountServiceTest {
         this.percentage = this.discountService.getDiscount(amount);
     }
 
-    @Then("We should get {int}% discount")
-    public void weShouldGetDiscount() {
-
-    }
-
-
     @Then("We should get ten percent discount")
     public void weShouldGetTenPercentDiscount() {
         Assert.assertEquals("10%" , percentage);
@@ -37,4 +31,8 @@ public class DiscountServiceTest {
         Assert.assertEquals("15%" , percentage);
     }
 
+    @Then("We should'nt get any percentage")
+    public void weShouldNtGetAnyPercentage() {
+        Assert.assertEquals("NA",percentage);
+    }
 }
